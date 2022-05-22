@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/batteryChecking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Battery Status"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/charging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Charging"
+        app:layout_constraintTop_toBottomOf="@id/batteryChecking"
+        app:layout_constraintStart_toStartOf="@id/batteryChecking"
+        app:layout_constraintEnd_toEndOf="@id/batteryChecking"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"/>
+    <ImageView
+        android:id="@+id/batteryImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_battery0"
+        app:layout_constraintTop_toBottomOf="@id/charging"
+        app:layout_constraintStart_toStartOf="@id/charging"
+        app:layout_constraintEnd_toEndOf="@id/charging"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/percentCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="66%"
+        app:layout_constraintTop_toBottomOf="@id/batteryImage"
+        app:layout_constraintStart_toStartOf="@id/batteryImage"
+        app:layout_constraintEnd_toEndOf="@id/batteryImage"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
